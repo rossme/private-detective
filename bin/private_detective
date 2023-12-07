@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "bundler/setup"
+require "parser/current"
+require "colorize"
+require "private_detective/analyze_project"
+require "private_detective/analyze_file"
+require "private_detective/analyze_node"
+require "private_detective/report"
+require "private_detective/version"
+
+files = if ARGV.empty?
+          Dir.glob("#{Dir.pwd}/**/app/models/*.rb")
+        else
+          ARGV
+        end
+
+private_detective = PrivateDetective::AnalyzeProject.new(files: files)
+private_detective&.analyze_project
+
+require "irb"
+IRB.start(__FILE__)
