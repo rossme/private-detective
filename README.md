@@ -17,7 +17,7 @@ gem 'private_detective'
 $ bundle install
 ```
 
-Run the following to scan the project's files
+Run the following in the project's route folder to begin scanning the project's files
     
 ```bash
 $ private_detective
