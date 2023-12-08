@@ -1,25 +1,23 @@
 # Private Detective 🕵️
-## A Ruby gem to analyze method visibility in your Ruby project
+## A Ruby gem that analyzes method visibility in your Ruby project
 
 ## Overview
 
-Private Detective was created to address a common issue in Ruby projects where determining the appropriate visibility for class methods is sometimes overlooked. Often, it is not immediately clear whether a method should be private, protected or public. Private Detective simplifies this process by providing tools to analyze Ruby source code files, helping developers identify and refine the visibility of their methods.
+Private Detective addresses a common issue in Ruby projects where determining the appropriate visibility for class methods is sometimes overlooked. It is not always clear whether a method should be private, protected or public. Private Detective analyzes Ruby source code files and checks method visibility from inside and outside of the class.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Gemfile:
 
 ```ruby
 gem 'private_detective'
 ```
 
-and then execute:
-
 ```
 $ bundle install
 ```
 
-and run the following to scan the project's files
+Run the following to scan the project's files
     
 ```bash
 $ private_detective
@@ -27,16 +25,18 @@ $ private_detective
 
 ## Why did I build this gem?
 
-In real-world scenarios, it is common for public methods to inadvertently expose internal details, or for private methods to be unnecessarily restrictive. This can lead to issues with maintainability, code readability, and overall project health. Private Detective was developed to streamline the identification and rectification of such visibility issues, offering a clearer understanding of method visibility within Ruby projects.
 
-More importantly, it was also a good excuse to look at the inner workings of the Rubocop gem and build a gem of my own exploring the Ruby file parser and to traverse AST nodes.
+I'm always looking for a good excuse to look at the inner workings of external libraries such as Rubocop. I decided to create a simple gem of my own exploring the Ruby file parser and experiment with traversing the AST and it's nodes.
+
+In real-world scenarios, it is common for public methods to inadvertently expose internal details, or for private methods to be unnecessarily restrictive. Private Detective was developed to streamline the identification and rectification of such visibility issues, offering a clearer understanding of method visibility within Ruby projects.
+
 
 ## How It Works
 
-The Private Detective gem employs the following process to analyze method visibility in your Ruby project:
+The gem employs the following process to analyze method visibility in your Ruby project:
 
 1. **Iteration Over Project Files:**
-    - The gem iterates over your project files (currently app/models only), inspecting the Ruby source code.
+    - The gem iterates over your project files (currently the default is app/models only), inspecting the Ruby source code.
 
 2. **Parsing to AST Nodes:**
     - Each file is parsed into an Abstract Syntax Tree (AST) node using the `parser` gem.
