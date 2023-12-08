@@ -1,9 +1,17 @@
-# Private Detective
+# Private Detective 🕵️
 ## A Ruby gem to analyze method visibility in your Ruby project
 
 ## Overview
 
 Private Detective was created to address a common issue in Ruby projects where determining the appropriate visibility for class methods is sometimes overlooked. Often, it is not immediately clear whether a method should be private, protected or public. Private Detective simplifies this process by providing tools to analyze Ruby source code files, helping developers identify and refine the visibility of their methods.
+
+## CLI Usage
+
+To analyze all Ruby source files in the current directory, simply run:
+    
+ ```bash
+ $ private_detective
+ ```
 
 ## Why did I build this gem?
 
@@ -37,7 +45,7 @@ gem 'private_detective'
 
 ## Example response
 
-```bash
+```response
 Private Detective found the following Class method information in your project:
 
 Class: Client
@@ -57,12 +65,6 @@ Class: User
 
 End of report
 ```
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ## Contributing
 
