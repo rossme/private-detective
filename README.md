@@ -5,9 +5,15 @@
 
 Private Detective was created to address a common issue in Ruby projects where determining the appropriate visibility for class methods is sometimes overlooked. Often, it is not immediately clear whether a method should be private, protected or public. Private Detective simplifies this process by providing tools to analyze Ruby source code files, helping developers identify and refine the visibility of their methods.
 
-## CLI Usage
+## Installation
 
-To analyze all Ruby source files in the current directory, simply run:
+Add this line to your application's Gemfile:
+
+```ruby
+gem 'private_detective'
+```
+
+and then execute:
     
  ```bash
  $ private_detective
@@ -34,14 +40,6 @@ The Private Detective gem employs the following process to analyze method visibi
 
 4. **Visibility Analysis:**
     - Based on the identified methods and modifiers, Private Detective provides insights into potential issues related to method visibility.
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'private_detective'
-```
 
 ## Example response
 
