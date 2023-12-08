@@ -14,10 +14,16 @@ gem 'private_detective'
 ```
 
 and then execute:
+
+```
+$ bundle install
+```
+
+and run the following to scan the project's files
     
- ```bash
- $ private_detective
- ```
+```bash
+$ private_detective
+```
 
 ## Why did I build this gem?
 
