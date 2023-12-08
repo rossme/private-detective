@@ -1,5 +1,5 @@
-# Private Detective 🕵️
-## A Ruby gem that analyzes method visibility in your Ruby project
+# Private Detective
+## 🕵️‍♂️ A Ruby gem that analyzes method visibility in your Ruby project
 
 ## Overview
 
